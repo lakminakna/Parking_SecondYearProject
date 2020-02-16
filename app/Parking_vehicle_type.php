@@ -13,4 +13,9 @@ class Parking_vehicle_type extends Model
       'no_of_vehicles_parked' ,
       'amount_per_hour'
     ];
+
+    public function parking_space()
+    {
+        return $this->belongsTo('App\Parking_space', 'parking_space_id');
+    }
 }

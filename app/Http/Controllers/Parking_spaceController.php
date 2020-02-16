@@ -53,8 +53,12 @@ class Parking_spaceController extends Controller
          $request->validate([
             'name'=>'required',
             'address'=>'required',
-            'description'=>'required'
+            'description'=>'required',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
+
+        $imageName = time().'.'.request()->image->getClientOriginalExtension();
+        $request->image->move(public_path('images'), $imageName);
 
         $parking_space = new Parking_space([
             'landowner_id' => Session::get('landownerid'),
@@ -65,14 +69,54 @@ class Parking_spaceController extends Controller
             'description' => $request->get('description'),
             
             //'open_on' => $request->get('open_on'),
+            'image_url' => $imageName,
 
              'poya' => $request->get('opentime1'),
              'public' => $request->get('opentime2'),
              'bank' => $request->get('opentime3'),
+             'is_reservation_on' => $request->get('reservation_status'),
             // 'reservation_status' => $request->get('reservation_status'),
         ]);
-
         $parking_space->save();
+
+        $parking_space->opentimes()->createMany([
+            [
+                'date' => 'Monday',
+                'open_from' => $request->get('open_from_monday'),
+                'open_till' => $request->get('open_till_monday'),
+            ],
+            [
+                'date' => 'Tuesday',
+                'open_from' => $request->get('open_from_tuesday'),
+                'open_till' => $request->get('open_till_tuesday'),
+            ],
+            [
+                'date' => 'Wednesday',
+                'open_from' => $request->get('open_from_wednesday'),
+                'open_till' => $request->get('open_till_wednesday'),
+            ],
+            [
+                'date' => 'Thursday',
+                'open_from' => $request->get('open_from_thursday'),
+                'open_till' => $request->get('open_till_thursday'),
+            ],
+            [
+                'date' => 'Friday',
+                'open_from' => $request->get('open_from_friday'),
+                'open_till' => $request->get('open_till_friday'),
+            ],
+            [
+                'date' => 'Saturday',
+                'open_from' => $request->get('open_from_saturday'),
+                'open_till' => $request->get('open_till_saturday'),
+            ],
+            [
+                'date' => 'Sunday',
+                'open_from' => $request->get('open_from_sunday'),
+                'open_till' => $request->get('open_till_sunday'),
+            ],
+        ]);
+
         return redirect()->route('loginlandowner');
     }
 
@@ -145,7 +189,7 @@ class Parking_spaceController extends Controller
         $parking_space->longitude = $request->longitude;
         $parking_space->latitude = $request->latitude;
         $parking_space->description = $request->get('description');
-        $parking_space->reservation_status_on = $request->get('reservation_status');
+        $parking_space->is_reservation_on = $request->get('reservation_status');
         $parking_space->poya = $request->get('opentime1');
         $parking_space->public = $request->get('opentime2');
         $parking_space->bank = $request->get('opentime3');

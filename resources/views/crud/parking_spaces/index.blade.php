@@ -39,7 +39,7 @@
             <td>{{$parking_space->name}}</td>
             <td>{{$parking_space->address}}</td>
             <td>{{$parking_space->description}}</td>
-            <td>{{$parking_space->reservation_status_on}}</td>
+            <td>{{$parking_space->is_reservation_on}}</td>
             <td>{{$parking_space->poya}}</td>
             <td>{{$parking_space->bank}}</td>
             <td>{{$parking_space->public}}</td>

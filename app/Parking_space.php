@@ -20,6 +20,8 @@ class Parking_space extends Model
       // 'open_from' ,
       // 'open_till' ,
       // 'open_status' ,
+      'is_reservation_on',
+      'image_url',
       'description',
       'poya',
       'bank',
@@ -28,4 +30,14 @@ class Parking_space extends Model
       'created_at'
 
     ];
+
+    public function opentimes()
+    {
+        return $this->hasMany('App\Opentime', 'parking_space_id');
+    }
+
+    public function parking_vehicle_types()
+    {
+        return $this->hasMany('App\Parking_vehicle_type', 'parking_space_id');
+    }
 }

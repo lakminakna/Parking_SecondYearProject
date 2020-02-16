@@ -7,17 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 class Opentime extends Model
 {
     protected $fillable = [
-      'first_name' ,
-      'last_name' ,
-      'gender' ,
-      'contact_no',
-      'address' ,
-      'licence_id' ,
-      'nic' ,
-      'email' ,
-      'image' ,
-      'username' ,
-      'password'
-      
+      'parking_space_id',
+      'date',
+      'open_from',
+      'open_till'
     ];
+
+    public function parking_space()
+    {
+        return $this->belongsTo('App\Parking_space', 'parking_space_id');
+    }
 }
