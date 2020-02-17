@@ -32,6 +32,14 @@
     @endforeach
   </tbody>
 </table>
+<div class="container">
+    <div class="row">
+        <div class="col-md-5" align="right">
+          <a href="{{ url('dynamic_pdf4') }}" class="btn btn-primary ">View as pdf</a>
+  
+        </div>
+    </div>
+</div>
 <script type="text/javascript">
   $('#search1').on('keyup', function(){
     var value = $(this).val();

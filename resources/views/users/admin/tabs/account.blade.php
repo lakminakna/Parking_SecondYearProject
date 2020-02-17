@@ -22,9 +22,11 @@
 		<div class="col-md-9">
 			<div class="content">
 				<h1>{{ $id->first_name }} {{ $id->last_name }}</h1>
-				<p><i class="fa fa-phone"></i> {{ $id->contact_no }}</p>
-				{{-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium eum consequuntur alias quibusdam, pariatur fugiat iusto fugit totam minus architecto eligendi provident neque id aspernatur quisquam! Doloribus cupiditate, qui dolores.
-				</p> --}}
+                 <p><i class="fa fa-phone"></i> {{ $id->contact_no }}</p>
+                 <p><i class="fa fa-home"></i> {{ $id->username }}</p>
+
+                 {{-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium eum consequuntur alias quibusdam, pariatur fugiat iusto fugit totam minus architecto eligendi provident neque id aspernatur quisquam! Doloribus cupiditate, qui dolores.
+                 </p> --}}
 			</div>
 		</div>
 	</div>

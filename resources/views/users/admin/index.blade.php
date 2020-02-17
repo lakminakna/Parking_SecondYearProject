@@ -24,11 +24,11 @@
   <p>Welcome: {{$id->first_name}}</p>
 
 <div class="navbar navbartab">
-<button class="tablink" onclick="openPage('my_account', this, 'red')" >My Account</button>
-<button class="tablink" onclick="openPage('users', this, 'yellow')" >Manage Users</button>
-<button class="tablink" onclick="openPage('lands', this, 'green')" id="defaultOpen">Manage Parkings</button>
+<button class="tablink" onclick="openPage('my_account', this, 'blue')" >My Account</button>
+<button class="tablink" onclick="openPage('users', this, 'blue')" >Manage Users</button>
+<button class="tablink" onclick="openPage('lands', this, 'blue')" id="defaultOpen">Manage Parkings</button>
 <button class="tablink" onclick="openPage('messages', this, 'blue')">User Messages</button>
-<button class="tablink" onclick="openPage('reviews', this, 'orange')">Manage Reviews</button>
+<button class="tablink" onclick="openPage('reviews', this, 'blue')">Manage Reviews</button>
 </div>
 
 <div id="my_account" class="tabcontent">

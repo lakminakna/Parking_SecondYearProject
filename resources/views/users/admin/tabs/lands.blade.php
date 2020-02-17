@@ -47,7 +47,7 @@
       <td><form action="{{ route('parking_spaces.destroy', $parking_space->id)}}" method="post">
         @csrf
         @method('DELETE')
-        <button class="btn btn-outline-success" type="submit">Remove</button>
+        <button class="btn btn-danger" type="submit">Remove</button>
       </form></td>
     </tr>
     @endforeach
@@ -56,10 +56,12 @@
 <div class="container">
     <div class="row">
         <div class="col-md-5" align="right">
-          <a href="{{ url('dynamic_pdf') }}" class="btn btn-danger ">View as pdf</a>
+          <a href="{{ url('dynamic_pdf') }}" class="btn btn-primary ">View as pdf</a>
+          <a href="{{ url('driverDashboard') }}" class="btn btn-primary ">Search for parking spaces</a>
         </div>
     </div>
 </div> 
+
 <script type="text/javascript">
   $('#search').on('keyup', function(){
     var value = $(this).val();

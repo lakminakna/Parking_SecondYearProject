@@ -25,7 +25,7 @@ body, html {
 
 /* Style tab links */
 .tablink {
-  background-color: #555;
+  background-color: black;
   color: white;
   float: left;
   border: none;
@@ -33,7 +33,7 @@ body, html {
   cursor: pointer;
   padding: 14px 16px;
   font-size: 17px;
-  width: 25%;
+  width: 20%;
 }
 
 .navbartab{
@@ -53,8 +53,9 @@ body, html {
   height: 100%;
 }
 
-#my_account {background-color: black;}
-#lands {background-color: #95C868;}
-#messages {background-color: #8BC1A4;}
-#reviews {background-color: #E3AC62;}
+#my_account {background-color: #909090;}
+#users {background-color: 	#909090;}
+#lands {background-color: 	#909090;}
+#messages {background-color:	#909090;}
+#reviews {background-color: 	#909090;}
 </style>
