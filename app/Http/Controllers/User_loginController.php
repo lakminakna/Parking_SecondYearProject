@@ -11,6 +11,7 @@ use App\Reservation;
 use App\Parking_vehicle_type;
 use App\Landowner;
 use App\Contact;
+use Illuminate\Support\Facades\Hash;
 
 class User_loginController extends Controller
 {

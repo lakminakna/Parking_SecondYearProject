@@ -55,7 +55,7 @@ class Parking_spaceController extends Controller
             'name'=>'required',
             'address'=>'required',
             'description'=>'required',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:204800',
         ]);
 
         $imageName = time().'.'.request()->image->getClientOriginalExtension();

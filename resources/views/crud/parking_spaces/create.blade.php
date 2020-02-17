@@ -86,9 +86,21 @@
   <!-- Laravel multiple image upload verification ends here -->
 
           </div>
-
-
-
+          <table cellspacing="10">
+           <tr><th> Type of Vehicle </th>
+              <th> Number of Parking Slots </th></tr>
+            <tr><td>Cars</td>
+                <td> <input type="Number" class="form-control" name="name" value="0" /></td></tr>  
+            <tr><td>Vans</td>
+                <td><input type="Number" class="form-control" name="name" value="0" /></td></tr>  
+            <tr><td>Motor Bikes</td>
+                <td><input type="Number" class="form-control" name="name" value="0" /></td></tr>  
+            <tr><td>Foot Bicycles</td>
+                <td><input type="Number" class="form-control" name="name" value="0"  /></td></tr>  
+            <tr><td>Three Wheelers</td>
+                <td><input type="Number" class="form-control" name="name" value="0" /></td></tr>  
+         </table>
+      
           <!-- <div class="form-group"> 
               <label for="city">Open from:</label>
               <input type="datetime-local" class="form-control" name="city"/>
