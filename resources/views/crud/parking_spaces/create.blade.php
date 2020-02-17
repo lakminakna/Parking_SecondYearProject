@@ -37,8 +37,8 @@
 
 
 
-          <div class="form-group">
-              <label for="image">Images:</label>
+         <!--  <div class="form-group"> -->
+              <!-- <label for="image">Images:</label> -->
               <!-- <input type="file" name="parkingimage"  multiple> -->   <!-- This is the normal way in html -->
               <!-- Laravel multiple image upload verification starts here -->
               <!-- <div class="container">
@@ -153,7 +153,7 @@
           </div> 
 
           <div class="form-group">
-          <label for="reservation">Select property image?</label></br>
+          <label for="image">Select property image?</label></br>
             <input type="file" name="image" class="form-control">
           </div>
 <br>

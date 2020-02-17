@@ -25,12 +25,14 @@
     background-attachment: fixed;
 }
 .box{
+margin-top: 0;
  position: relative;
  top: 150px;
  width:500px;
  margin:0 auto;
  margin-bottom: 100px;
  border:1px solid #ccc;
+ background: url();
 }
    .t-r {
        position: absolute;
@@ -105,7 +107,7 @@
      </div>
      <div class="form-group">
       <label><span class="label success">Gender</span></label><br>
-      <input type="radio" name="gender" value="Male" class="" /><span class="label success"> Male</span><br>
+      <input type="radio" name="gender" value="Male" class="" /><span class="label success"> Male</span>
       <input type="radio" name="gender" value="Female" class="" /><span class="label success"> Female</span><br>
      </div>
      <div class="form-group">
@@ -133,8 +135,13 @@
       <input type="password" name="conpassword" class="form-control" />
      </div>
     <div class="form-group">
-     <input type="submit" name="login" class="btn btn-primary" value="Login" />
+          <label for="image"><span class="label success">Upload your Photo</span></label></br>
+            <input type="file" name="image" class="form-control">
+      </div>
+    <div>
+     <input type="submit" name="login" class="btn btn-primary" value="SignUp" />
     </div>
+  </form>
    </form>
   </div>
  </body>

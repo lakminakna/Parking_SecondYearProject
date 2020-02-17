@@ -27,6 +27,7 @@
  width:500px;
  margin:0 auto;
  border:1px solid #ccc;
+ background: url("public/images/signupdriver.jpg")
 }
    .t-r {
        position: absolute;
@@ -65,7 +66,7 @@
 
   <br />
   <div class="container box">
-   <h3 align="center"><span class="label1 success">Driver Login</span></h3><br />
+   <h3 align="center"><span class="label1 success">Driver SignUp</span></h3><br />
 
    @if(isset(Auth::user()->email))
     <script>window.location="/main/successlogin";</script>

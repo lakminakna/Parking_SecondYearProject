@@ -9,7 +9,7 @@
       <div class="text">
           <h3>Want to enjoy easy parking? </h3>
           <h6><p>Fed up of overpaying for parking and getting tickets for parking violations? </p> <p>Get directions to the nearest parking space.</p></h6>
-          <a class="button white" href="#">F A Q <sub>s</sub></a>
+           <a class="button white" href="faq">F A Q <sub>s</sub></a>
           <a class="button" href="signup">Get Started</a>
       </div>
     </div>

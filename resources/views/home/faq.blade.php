@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,7 +21,7 @@
     <link rel="stylesheet" href="{{ URL::asset('assets/css/icofont.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('assets/css/jquery-ui.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('assets/css/jQuery.verticalCarousel.css') }}">
-    <link rel="stylesheet" href="{{ URL::asset('assets/stylePricing.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('assets/styleFaq.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('assets/responsive.css') }}">
 </head>
 
@@ -57,43 +56,30 @@
                         </div>
                     </div>
                 </div>
-               <div class="container">
+                <div class="container">
            
-                <div class="text-center welcome-text">
+                <div class=" text-center welcome-text">
                 
-                     <h1><font color='black'>Privacy Policy</font></h1>
+                <h1><font color='black'>Frequently Asked Questions</font></h1>
                 </div>
+                
                 <div class="row">
-                    <div class="col-sm-12">
-                        <p class="text-center description">When you use this website ,you must obsense these terma and conditions.We (ParKing) may change them from time to time .
-                        The coprright and all other intellectual property rights in this website belong to us.You must not copy,transmit,store contents of this website without our
-                         written consent.
-                        </p>
-                        <h3>Access to parking</h3>
-                        <p class=" description">
-                            Due to the nature of software and the internet.We cannot gurantee that your access to or running of this website shall be uniterupted or erro free.
-                        </p>
-                        <h3>Privacy</h3>
-                        <p class=" description">
-                            We are commited to protecting your privacy and collect only data that is essential for us to provide you with our service.
-                        </p>
-                        <p class=" description">
-                            When you register for our service we need to know details such as your name ,address ,telephone number and e-mail addrress.This allow us to communicate with
-                             you about new enquiries,special offers and changes to operate a secure logging in system for you to access your own account in order to amend it.
-                        </p>
-                        <h3>Communication</h3>
-                        <p class=" description">
-                            We request that all information provided to us is accurate ,current and complete. 
-                        </p>
-                        <p class=" description">
-                            Personal information that you supply to us will not be disclosed by us to any third party save in accordance with our privacy policy.You agree that we may use
-                             the personal information supplied by you in accordance with our privacy policy.
-                        </p>
-                        <p class=" description">
-                            All notices sent to you will be sent to the email address provided to us.By accepting these terms you give your consent to recieve communications that we provide
-                             to you by email satisfy any legalrequirement that such communications be in writing.
-                        </p>
+                    <div class="col-sm-6">
+                    <ol>
+                   <li class="text-left"><b>Is this application available for free</b></li>
+                    <p class="text-left description">Yes, it is available for free. It can be downloaded and used without paying any cost.</p>
+                    <li class="text-left"><b> Does ParkMeApp work on every smartphone?</b></li>
+                    <p class="text-left description">Yes App is available for both Apple (Smartphones Only) and Android (SmartPhones & Tablets).</p>
+                    <li class="text-left"><b>Do I need an account to use the app?</b></li>
+                    <p class="text-left description">yes, if you create an account then you can access all features.</p>
+                    <li class="text-left"><b>Do you’ll plan to charge from the parking spot owners for adding the locations through the app?</b></li>
+                    <p class="text-left description">For now it is totally free, but in the future we might charge to cover our expenses.</p>
+                    <li class="text-left"><b>Why do I need to install this app?</b></li>
+                    <p class="text-left description">Well this app is created not only for vehicle owners, this can also be helpful for anyone who is planning to earn money by converting their free space into a parking spot.
+                    Additionally this helps to reduce traffic by diverting the vehicles which are park on roads to the private locations.</p>
+                    </ol>
                     </div>
+                    
                 </div>
         </div>
                 

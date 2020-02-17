@@ -47,10 +47,63 @@
               <input type="checkbox" name="opentime2" value="1" {{$parking_space->public==1 ? 'checked' : ''}}> Public Holidays
               <input type="checkbox" name="opentime3" value="1" {{$parking_space->bank==1 ? 'checked' : ''}} > Bank Holidays<br><small>Thesse will be displayed for the users of the application</small><br><br>
           </div>
-            <div class="form-group">
+          <div> 
+               <label for="city">Open Time:</label><br>
+               <table style="width:100%">
+                <tr>
+              <td><label for="nothing"></label></td>
+              <th> <label for="openfrom">Open from:</label></th>
+              <th><label for="opentill">Open Till:</label></th>
+            </tr>
+                <tr>
+               <th><label for="monday">Monday</label></th>
+               <td><input type="time" class="form-control" name="open_from_monday"/></td>
+              <td><input type="time" class="form-control" name="open_till_monday"/> </td>
+            </tr>
+            <tr>
+              <th><label for="tuesday">Tuesday</label></th>
+              <td><input type="time" class="form-control" name="open_from_tuesday"/></td>
+              <td><input type="time" class="form-control" name="open_till_tuesday"/></td>
+            </tr>
+             <tr>
+              <th><label for="wednesday">Wednesday</label></th>
+              <td><input type="time" class="form-control" name="open_from_wednesday"/></td>
+              <td><input type="time" class="form-control" name="open_till_wednesday"/></td>
+            </tr>
+             <tr>
+              <th><label for="thursday">Thursday</label></th>
+              <td><input type="time" class="form-control" name="open_from_thursday"/></td>
+              <td><input type="time" class="form-control" name="open_till_thursday"/></td>
+            </tr>
+             <tr>
+              <th><label for="friday">Friday</label></th>
+              <td><input type="time" class="form-control" name="open_from_friday"/></td>
+              <td><input type="time" class="form-control" name="open_till_friday"/></td>
+            </tr>
+             <tr>
+              <th><label for="saturday">Saturday</label></th>
+              <td><input type="time" class="form-control" name="open_from_saturday"/></td>
+              <td><input type="time" class="form-control" name="open_till_saturday"/></td>
+            </tr>
+             <tr>
+              <th><label for="sunday">Sunday</label></th>
+              <td><input type="time" class="form-control" name="open_from_sunday"/></td>
+              <td><input type="time" class="form-control" name="open_till_sunday"/></td>
+            </tr>
+          </table>
+          <br>
+          </div> 
+
+          <div class="form-group">
+          <label for="reservation">Select property image?</label></br>
+            <input type="file" name="image" class="form-control">
+          </div>
+          <br/>
+            
+           <div class="form-group">
                <label for="reservation">Is reservation allowed?</label></br>
-              <input type="radio"  name="reservation_status" value="yes"> Allowed<br>
-              <input type="radio"  name="reservation_status" value="no"> Not allowed<br>
+              <input type="radio"  name="reservation_status" value=1> Allowed<br>
+              <input type="radio"  name="reservation_status" value=0 checked> Not allowed<br>
           </div>
             <button type="submit" class="btn btn-primary">Update</button>
         </form>

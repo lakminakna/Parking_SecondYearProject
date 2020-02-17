@@ -42,8 +42,12 @@ class LandownerController extends Controller
          $request->validate([
             'first_name'=>'required',
             'last_name'=>'required',
-            'email'=>'required'
+            'email'=>'required',
+            'image_url' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
+
+        $imageName = time().'.'.request()->image->getClientOriginalExtension();
+        $request->image->move(public_path('images'), $imageName);
 
         $landowner = new Landowner([
             'first_name' => $request->get('first_name'),
@@ -52,11 +56,13 @@ class LandownerController extends Controller
             'gender' => $request->get('gender'),
             'contact_no' => $request->get('contact_no'),
             'nic' => $request->get('nic'), 
-             'image' => $request->get('image'),
+
+             'image_url' => $request->get('image_url'),
+
              'username' => $request->get('username'), 
              'password' => $request->get('password'), ]);
         $landowner->save();
-        return redirect('/landowners')->with('success', 'Landowner saved!');
+        return redirect('/')->with('success', 'Landowner saved!');
     }
 
     /**

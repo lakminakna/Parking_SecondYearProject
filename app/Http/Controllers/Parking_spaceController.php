@@ -27,6 +27,7 @@ class Parking_spaceController extends Controller
     {
        $landDetails_id = Req::get ( 'landDetails_id' );
        $parking_spaces = DB::table('parking_spaces')->where('id',$landDetails_id)->get();
+       $opentimes=DB::table('opentimes')->where('parking_space_id',$parking_space_id)->get();
 
         return view('crud.parking_spaces.index', compact('parking_spaces'));
 
@@ -180,11 +181,13 @@ class Parking_spaceController extends Controller
         $request->validate([
             'name'=>'required',
             'address'=>'required',
-            'description'=>'required'
+            'description'=>'required',
+            'image' => 'required'
         ]);
 
         $parking_space = Parking_space::find($id);
         $parking_space->name =  $request->get('name');
+     //   'name' => $request->get('name'),
         $parking_space->address = $request->get('address');
         $parking_space->longitude = $request->longitude;
         $parking_space->latitude = $request->latitude;
@@ -193,9 +196,47 @@ class Parking_spaceController extends Controller
         $parking_space->poya = $request->get('opentime1');
         $parking_space->public = $request->get('opentime2');
         $parking_space->bank = $request->get('opentime3');
-        // $parking_space->city = $request->get('city');
-        // $parking_space->country = $request->get('country');
+       
+
         $parking_space->save();
+
+        $parking_space->opentimes()->createMany([
+            [
+                'date' => 'Monday',
+                 $opentimes->open_from => $request->get('open_from_monday'),
+                 $opentimes->open_till => $request->get('open_till_monday'),
+            ],
+            [
+                'date' => 'Tuesday',
+                $opentimes->open_from => $request->get('open_from_tuesday'),
+                $opentimes->open_till => $request->get('open_till_tuesday'),
+            ],
+            [
+                'date' => 'Wednesday',
+                $opentimes->open_from => $request->get('open_from_wednesday'),
+                $opentimes->open_till => $request->get('open_till_wednesday'),
+            ],
+            [
+                'date' => 'Thursday',
+                $opentimes->open_from => $request->get('open_from_thursday'),
+                $opentimes->open_till=> $request->get('open_till_thursday'),
+            ],
+            [
+                'date' => 'Friday',
+                $opentimes->open_from => $request->get('open_from_friday'),
+                $opentimes->open_till => $request->get('open_till_friday'),
+            ],
+            [
+                'date' => 'Saturday',
+                $opentimes->open_from => $request->get('open_from_saturday'),
+                $opentimes->open_till => $request->get('open_till_saturday'),
+            ],
+            [
+                'date' => 'Sunday',
+               $opentimes->open_from => $request->get('open_from_sunday'),
+               $opentimes->open_till => $request->get('open_till_sunday'),
+            ],
+        ]);
 
         return redirect()->route('loginlandowner')->with('success', 'Parking_space updated!');
     }

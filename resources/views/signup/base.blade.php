@@ -23,8 +23,8 @@
 <body>
   <div class="flex-center position-ref full-height">
 
-    <div class="top-right links">
-
+    <div  align="right">
+<!-- class="top-right links" -->
       <i class="fas fa-arrow-left"></i><a class="link" href="{{ url('/') }}">BACK</a>
 
     </div>

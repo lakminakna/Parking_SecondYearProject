@@ -10,6 +10,7 @@ Route::get('services', function () {return view('home/services');});
 Route::get('privacy_policy', function () {return view('home/privacy_policy');});
 Route::get('pricing', function () {return view('home/pricing');});
 Route::get('help', function () {return view('home/help');});
+Route::get('faq', function () {return view('home/faq');});
 
 /*signin - signup views*/
 Route::get('signin', function () {Session::flush(); return view('login/base');});

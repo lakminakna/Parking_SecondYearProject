@@ -31,8 +31,8 @@
 
 
 
-<button class="tablink" onclick="openPage('my_account', this, 'red')" id="defaultOpen">My Account</button>
-<button class="tablink" onclick="openPage('my_lands', this, 'green')" >My Lands</button>
+<button class="tablink" onclick="openPage('my_account', this, 'red')" >My Account</button>
+<button class="tablink" onclick="openPage('my_lands', this, 'green')" id="defaultOpen">My Lands</button>
 <button class="tablink" onclick="openPage('paking_type', this, 'blue')">Paking Vehicle Type</button>
 <button class="tablink" onclick="openPage('reservations', this, 'red')">Reservations</button>
 <!-- <button class="tablink" onclick="openPage('About', this, 'orange')">About</button> -->

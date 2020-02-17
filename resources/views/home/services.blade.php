@@ -60,7 +60,7 @@
             
                 <div class="text-center welcome-text">
                 
-                     <h1>Services</h1>
+                     <h1><font color='black'>Services</font></h1>
                 </div>
                 <div class="row">
                     <div class="col-sm-12">
