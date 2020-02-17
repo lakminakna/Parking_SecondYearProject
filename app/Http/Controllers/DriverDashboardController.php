@@ -11,24 +11,25 @@ class DriverDashboardController extends Controller
     {
         $parkingslots = DB::table('parking_spaces')->get();
         $vehicle = DB::table('drivervehicles')->get();
-        return view('users.driver.dashboard',['parkingslots' => $parkingslots,'vehicle' => $vehicle]);
+        return view('driver.dashboard',['parkingslots' => $parkingslots,'vehicle' => $vehicle]);
     }
 
-    public function searchbylocation(Request $request)
+    public function search(Request $request)
     {
         $location = $request->input('location');
-        $parkingslots = DB::table('parking_spaces')->where('address', $location)->get();
+        $type = $request->input('type');
+        $parkingslots = DB::table('parking_spaces')->where('address', $location)->where('type',$type)->get();
         $vehicle = DB::table('drivervehicles')->get();
 
-        return view('users.driver.dashboard',['parkingslots'=> $parkingslots,'vehicle' => $vehicle]);
+        return view('driver.dashboard',['parkingslots'=> $parkingslots,'vehicle' => $vehicle]);
     }
 
-    public function searchbyType(Request $request)
+   /* public function searchbyType(Request $request)
     {
         $type = $request->input('type');
         $parkingslots = DB::table('parking_spaces')->where('type', $type)->get();
         $vehicle = DB::table('drivervehicles')->get();
 
-        return view('users.driver.dashboard',['parkingslots'=> $parkingslots,'vehicle' => $vehicle]);
-    }
+        return view('driver.dashboard',['parkingslots'=> $parkingslots,'vehicle' => $vehicle]);
+    }*/
 }

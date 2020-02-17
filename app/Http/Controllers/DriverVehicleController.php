@@ -15,7 +15,7 @@ class DrivervehicleController extends Controller
     public function index()
     {
         $vehicles = Drivervehicle::all();
-        return view('driver.manageVehicle',compact('vehicles'));
+        return view('driver.manageVehicle',['vehicles'=> $vehicles]);
     }
 
     /**
@@ -39,7 +39,7 @@ class DrivervehicleController extends Controller
         $request->validate([
             'type' => 'required',
             'model' => 'required',
-            'number' => 'required',
+            'number' => 'required|regex:/[A-Z]{3}[0-9]{4}/',
         ]);
 
         Drivervehicle::create($request->all());

@@ -93,6 +93,6 @@ Route::get('driverDashboard','DriverDashboardController@index');
 Route::resource('drivervehicle','DrivervehicleController');
 Route::post('driverRequest','parkingRequest@store');
 Route::get('notification','notification@index');
-Route::post('searchbylocation','DriverDashboardController@searchbylocation');
-Route::post('searchbytype','DriverDashboardController@searchbyType');
+Route::post('searchslots','DriverDashboardController@search');
+Route::get('review','review@index');
 /*driver part end*/

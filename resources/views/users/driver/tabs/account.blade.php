@@ -29,6 +29,8 @@
 
                  {{-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium eum consequuntur alias quibusdam, pariatur fugiat iusto fugit totam minus architecto eligendi provident neque id aspernatur quisquam! Doloribus cupiditate, qui dolores.
                  </p> --}}
+
+                 <a href="/driverDashboard"><button type='submit' class="btn btn-sm btn-success">Make a reservation for parking slot</button></a>
              </div>
          </div>
      </div>
