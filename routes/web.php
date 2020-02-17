@@ -79,6 +79,9 @@ Route::get('/dynamic_pdf2','DynamicPDFController2@index');
 Route::get('/dynamic_pdf2/pdf2','DynamicPDFController2@pdf');
 Route::get('/dynamic_pdf3','DynamicPDFController3@index');
 Route::get('/dynamic_pdf3/pdf3','DynamicPDFController3@pdf');
+Route::get('/dynamic_pdf4','DynamicPDFController4@index');
+Route::get('/dynamic_pdf4/pdf4','DynamicPDFController4@pdf');
+
 
 Route::get('/paywithpaypal', function () {return view('paywithpaypal');});
 Route::post('/paypal', 'PaymentController@payWithpaypal');
